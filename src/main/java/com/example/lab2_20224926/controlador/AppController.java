@@ -41,7 +41,7 @@ public class AppController {
     @GetMapping(value = "/formAuto")
     public String formAuto(Model model) {
         model.addAttribute("listaSedes", sedeRepository.findAll());
-        return "auto/form";
+        return "autos/form";
     }
 
     @PostMapping(value = "/crearAuto")

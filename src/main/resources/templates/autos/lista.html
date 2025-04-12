@@ -24,7 +24,7 @@
 
 <div class="container mt-4">
     <h1>Autos</h1>
-    <a th:href="@{/crearAuto}" class="btn btn-secondary mb-3">Crear auto</a>
+    <a th:href="@{/formAuto}" class="btn btn-secondary mb-3">Crear auto</a>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -48,7 +48,7 @@
 
             <td>
 
-                <a th:href="@{/borrarAuto/{id}(id=${auto.id})}" class="btn btn-danger btn-sm">Borrar</a>
+                <a th:href="@{/editarAuto/{id}(id=${auto.id})}" class="btn btn-sm">Editar</a>
                 <a th:href="@{/borrarAuto/{id}(id=${auto.id})}" class="btn btn-danger btn-sm">Borrar</a>
 
             </td>

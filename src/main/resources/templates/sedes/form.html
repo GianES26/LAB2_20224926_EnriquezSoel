@@ -12,33 +12,33 @@
 <div class="container mt-5">
     <h2 class="mb-4 text-center">Crear Jugador</h2>
 
-    <form method="post" th:action="@{/verificarJugador}">
+    <form method="post" th:action="@{/crearAuto}">
         <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input name="nombre" type="text" class="form-control" id="nombre" required>
+            <label for="modelo" class="form-label">modelo</label>
+            <input name="modelo" type="text" class="form-control" id="modelo" required>
         </div>
 
         <div class="mb-3">
-            <label for="edad" class="form-label">Edad</label>
-            <input name="edad" type="number" class="form-control" id="edad" required>
+            <label for="color" class="form-label">color</label>
+            <input name="color" type="text" class="form-control" id="color" required>
         </div>
 
         <div class="mb-3">
-            <label for="posicion" class="form-label">Posición</label>
-            <input name="posicion" type="text" class="form-control" id="posicion" required>
+            <label for="kilometraje" class="form-label">kilometraje</label>
+            <input name="kilometraje" type="number" class="form-control" id="kilometraje" required>
         </div>
 
         <div class="mb-3">
-            <label for="club" class="form-label">Club</label>
-            <input name="club" type="text" class="form-control" id="club" required>
+            <label for="costo_dia" class="form-label">costo por dia</label>
+            <input name="costo_dia" type="text" class="form-control" id="costo_dia" required>
         </div>
 
         <div class="mb-3">
             <label for="seleccion" class="form-label">Selección</label>
             <select name="seleccion" id="seleccion" class="form-select" required>
-                <option th:each="sel : ${listaSelecciones}"
-                        th:value="${sel.id}"
-                        th:text="${sel.nombre}">Seleccion</option>
+                <option th:each="sede : ${listaSedes}"
+                        th:value="${sede.id}"
+                        th:text="${sede.nombre}">Seleccion</option>
 
             </select>
         </div>
