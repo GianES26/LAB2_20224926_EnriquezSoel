@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Sedes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Gestión Vehicular</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/listaAutos}">Autos</a>
+                    <a class="nav-link" th:href="@{/listaSeguros}">Seguros</a>
+                    <a class="nav-link" th:href="@{/listaSedes}">Sedes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h1>Sedes</h1>
+    <a th:href="@{/crearSede}" class="btn btn-secondary mb-3">Crear sede</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Distrito</th>
+            <th>Direccion</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="sede : ${listaSedes}">
+            <td th:text="${sede.id}"></td>
+            <td th:text="${sede.distrito}"></td>
+            <td th:text="${sede.direccion}"></td>
+
+            <td> Acciones xd
+                <!--
+                <a th:href="@{/borrarJugador/{id}(id=${jugador.id})}" class="btn btn-danger btn-sm">Borrar</a>
+                <a th:href="@{/borrarJugador/{id}(id=${jugador.id})}" class="btn btn-danger btn-sm">Borrar</a>
+                -->
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
